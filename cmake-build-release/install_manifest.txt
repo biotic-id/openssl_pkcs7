@@ -1,0 +1,2 @@
+/usr/local/lib/libopenssl_pkcs7.dylib
+/usr/local/include/openssl_pkcs7.h
