@@ -71,7 +71,7 @@ int verify_pkcs7(void *ca, size_t ca_len, void *signature, size_t signature_len,
     return ret;
 }
 
-char * pkcs7_attr(void *signature, size_t signature_len, int attr){
+char * pkcs7_attr(const void *signature, const int signature_len, const int attr){
     PKCS7 *p7 = NULL;
     BIO *in = NULL;
     int ret = 0;
@@ -93,28 +93,25 @@ char * pkcs7_attr(void *signature, size_t signature_len, int attr){
     unsigned char *entryString				= NULL;
     while((si = sk_PKCS7_SIGNER_INFO_pop(info))){
         X509 *userCert = PKCS7_cert_from_signer_info(p7, si);
-        if(!(subject = X509_get_subject_name(userCert)) ||
-           !(position = X509_NAME_get_index_by_NID(subject,attr, -1)) ||
-           !(entry = X509_NAME_get_entry(subject, position)) ||
-           (asn1Data = X509_NAME_ENTRY_get_data(entry)))
+        if(!((subject = X509_get_subject_name(userCert))) ||
+           !((position = X509_NAME_get_index_by_NID(subject,attr, -1))) ||
+           !((entry = X509_NAME_get_entry(subject, position))) ||
+           ((asn1Data = X509_NAME_ENTRY_get_data(entry))))
         {
             char *s = (char *) ASN1_STRING_get0_data(asn1Data);
             val = strdup(s);
-            //ASN1_STRING_free(asn1Data);
-            //X509_NAME_ENTRY_free(entry);
-            //X509_NAME_free(subject);
+            ASN1_STRING_free(asn1Data);
+            X509_NAME_ENTRY_free(entry);
+            X509_NAME_free(subject);
         }
         X509_free(userCert);
         PKCS7_SIGNER_INFO_free(si);
     }
-    ret = 1;
-
-    err:
-    if (ret == 0) {
-        ERR_print_errors_fp(stderr);
-    }
 
     PKCS7_free(p7);
     BIO_free(in);
+    if(val == NULL){
+        val = strdup("");
+    }
     return val;
 }

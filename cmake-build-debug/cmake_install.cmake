@@ -1,4 +1,4 @@
-# Install script for directory: /Users/roman/devel/openssl-pkcs7
+# Install script for directory: /Users/roman/devel/openssl_pkcs7
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -38,7 +38,7 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "openssl_pkcs" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/Users/roman/devel/openssl-pkcs7/cmake-build-debug/libopenssl_pkcs7.dylib")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/Users/roman/devel/openssl_pkcs7/cmake-build-debug/libopenssl_pkcs7.dylib")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libopenssl_pkcs7.dylib" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libopenssl_pkcs7.dylib")
     if(CMAKE_INSTALL_DO_STRIP)
@@ -51,7 +51,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "openssl_pkcs" OR NOT CMAKE_INSTALL_COMPONEN
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "openssl_pkcs" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE FILE FILES "/Users/roman/devel/openssl-pkcs7/openssl_pkcs7.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE FILE FILES "/Users/roman/devel/openssl_pkcs7/openssl_pkcs7.h")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -62,5 +62,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/roman/devel/openssl-pkcs7/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/roman/devel/openssl_pkcs7/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

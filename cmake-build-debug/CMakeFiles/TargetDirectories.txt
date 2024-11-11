@@ -1,7 +1,7 @@
-/Users/roman/devel/openssl-pkcs7/cmake-build-debug/CMakeFiles/openssl_pkcs7.dir
-/Users/roman/devel/openssl-pkcs7/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/roman/devel/openssl-pkcs7/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/roman/devel/openssl-pkcs7/cmake-build-debug/CMakeFiles/list_install_components.dir
-/Users/roman/devel/openssl-pkcs7/cmake-build-debug/CMakeFiles/install.dir
-/Users/roman/devel/openssl-pkcs7/cmake-build-debug/CMakeFiles/install/local.dir
-/Users/roman/devel/openssl-pkcs7/cmake-build-debug/CMakeFiles/install/strip.dir
+/Users/roman/devel/openssl_pkcs7/cmake-build-debug/CMakeFiles/openssl_pkcs7.dir
+/Users/roman/devel/openssl_pkcs7/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/roman/devel/openssl_pkcs7/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/roman/devel/openssl_pkcs7/cmake-build-debug/CMakeFiles/list_install_components.dir
+/Users/roman/devel/openssl_pkcs7/cmake-build-debug/CMakeFiles/install.dir
+/Users/roman/devel/openssl_pkcs7/cmake-build-debug/CMakeFiles/install/local.dir
+/Users/roman/devel/openssl_pkcs7/cmake-build-debug/CMakeFiles/install/strip.dir
