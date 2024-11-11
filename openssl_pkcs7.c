@@ -104,8 +104,12 @@ char * pkcs7_attr(const void *signature, const int signature_len, const int attr
     }
     subject = X509_get_subject_name(userCert);
     entryString = (char *) malloc(1024);
-    X509_NAME_get_text_by_NID(subject, attr, entryString, 1024);
-    val = strdup(entryString);
+    if(X509_NAME_get_text_by_NID(subject, attr, entryString, 1024) != -1){
+        val = strdup(entryString);
+    }
+    else{
+        val = strdup("");
+    }
     free(entryString);
 
     X509_free(userCert);
